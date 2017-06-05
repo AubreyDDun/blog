@@ -1,0 +1,788 @@
+<!doctype html>
+
+
+
+  
+
+
+<html class="theme-next muse use-motion" lang="zh-Hans">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.1" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="Hexo, NexT" />
+
+
+
+
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.1.1" />
+
+
+
+
+
+
+<meta name="description" content="前言“其实我觉得flex很像现在的人——是适应性很好的生物，在家秋衣秋裤在外香肩外露。flex container看作一个环境或者大佬，flex-item是其中个体或者马仔。个体如何存在很大程度上取决环境的设定，当然也会有一些出世的人 比如absolute;``` 存在感就有比较酷” —— 炖炖1234567891011121314151617181920212223242526272829303">
+<meta property="og:type" content="article">
+<meta property="og:title" content="一起从头学习Flex！">
+<meta property="og:url" content="https://blog.kaolafed.com/2017/05/26/一起从头学习Flex！/index.html">
+<meta property="og:site_name" content="考拉前端团队博客">
+<meta property="og:description" content="前言“其实我觉得flex很像现在的人——是适应性很好的生物，在家秋衣秋裤在外香肩外露。flex container看作一个环境或者大佬，flex-item是其中个体或者马仔。个体如何存在很大程度上取决环境的设定，当然也会有一些出世的人 比如absolute;``` 存在感就有比较酷” —— 炖炖1234567891011121314151617181920212223242526272829303">
+<meta property="og:updated_time" content="2017-06-05T11:12:34.677Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="一起从头学习Flex！">
+<meta name="twitter:description" content="前言“其实我觉得flex很像现在的人——是适应性很好的生物，在家秋衣秋裤在外香肩外露。flex container看作一个环境或者大佬，flex-item是其中个体或者马仔。个体如何存在很大程度上取决环境的设定，当然也会有一些出世的人 比如absolute;``` 存在感就有比较酷” —— 炖炖1234567891011121314151617181920212223242526272829303">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Muse',
+    sidebar: {"position":"left","display":"post","offset":12,"offset_float":0,"b2t":false,"scrollpercent":false},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="https://blog.kaolafed.com/2017/05/26/一起从头学习Flex！/"/>
+
+
+
+
+
+  <title>一起从头学习Flex！ | 考拉前端团队博客</title>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">考拉前端团队博客</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle"></p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="https://blog.kaolafed.com/2017/05/26/一起从头学习Flex！/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="考拉前端团队">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="考拉前端团队博客">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                一起从头学习Flex！
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-05-26T00:00:00+08:00">
+                2017-05-26
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>“其实我觉得flex很像现在的人——是适应性很好的生物，在家秋衣秋裤在外香肩外露。flex container看作一个环境或者大佬，flex-item是其中个体或者马仔。个体如何存在很大程度上取决环境的设定，当然也会有一些出世的人 比如<figure class="highlight plain"><figcaption><span>absolute;``` 存在感就有比较酷” —— 炖炖</span></figcaption><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">&lt;!-- more --&gt;</div><div class="line"></div><div class="line">## 背景：布局模式</div><div class="line">页面拆开了看，无非是由众多尺寸各异的box以不同层叠水平和顺序组合而成。</div><div class="line"></div><div class="line">CSS2.1定义了下面前4种布局模式，不同的布局模式下box内的渲染规则不同。</div><div class="line"></div><div class="line">| | 布局 | 特性</div><div class="line">---|---|---</div><div class="line">block layout | 块级布局 | 独立的渲染区域，与外界无关</div><div class="line">inline layout | 行内布局 | 为布局文本设计</div><div class="line">table layout | 表格布局 | 在表格格子布局二维数据</div><div class="line">positioned layout | 定位布局 | 不考虑文件流中其他元素，布局有非常明确的位置</div><div class="line">**flex layout** | **弹性布局** | **呈现复杂的应用与页面**</div><div class="line">flex-layout和block-layout非常相似。</div><div class="line"></div><div class="line">块级布局中一些比较复杂的属性，比如浮动、多列，在弹性布局中是没有的；</div><div class="line"></div><div class="line">反过来弹性布局有一些很简单但厉害的属性去实现复杂的网页布局中常见的需求。</div><div class="line"></div><div class="line">## flex-container档案</div><div class="line">1. 元素名：flex container</div><div class="line">2. 中文名：弹性容器、弹性盒</div><div class="line">3. 身份：大佬</div><div class="line">4. 年代：css3，chrome29就已经可以不加前缀地支持了</div><div class="line">5. 权力：弹性布局——指定容器中元素的布局方式，子元素在其中是否收缩或伸展</div><div class="line">6. 被接受程度：所有的浏览器都支持flexbox（[caniuse](http://caniuse.com/flexbox)）</div><div class="line">    ![image](https://raw.githubusercontent.com/lzxb/flex.css/master/shot/caniuse.png)</div><div class="line"></div><div class="line">        flex layout is split into three versions: </div><div class="line">        1. old version  display: box;</div><div class="line">        2. transitional version: display:flexbox;</div><div class="line">        3. present standard version: display:flex;</div><div class="line">        </div><div class="line">        Android</div><div class="line">        2.3  began to support old version: display: -webkit-box;</div><div class="line">        4.4 began to support standard version: display: flex;</div><div class="line">        </div><div class="line">        IOS</div><div class="line">        6.1  began to support old version: display: -webkit-box;</div><div class="line">        7.1 began to support standard version: display: flex;</div><div class="line">        </div><div class="line">7. 如何成为~~大佬~~ **flex**：```display:flex/inline-flex;``` 分别产生块级和行内的弹性容器。</div><div class="line">8. 社会关系：弹性容器中的子元素——**flex items**</div><div class="line">9. 主要参数：主轴、侧轴，主轴长度、侧轴长度</div><div class="line">    ![flexbox](http://p1.bpimg.com/567571/492552df52d4b872.png)</div><div class="line">10. 速记几个属性：</div><div class="line">    - **flex-flow** 子元素排列的方向和是否换行 ```flex-flow: [&lt;flex-direction&gt; &lt;flex-wrap&gt;]</div></pre></td></tr></table></figure></p>
+<pre><code>    1. **flex-direction** 排列方向和顺序（主轴侧轴方向决定）
+
+        <figure class="highlight plain"><figcaption><span>row | row-reverse | column | column-reverse```</span></figcaption><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">2. **flex-wrap** 主轴个数和排列顺序</div><div class="line"></div><div class="line">    ```flex-wrap: nowrap | wrap | wrap-reverse</div></pre></td></tr></table></figure>
+
+
+        ![](http://i1.piimg.com/567571/a1aab184f0e15918.png)
+        ![](http://i1.piimg.com/567571/afebc19a533dea82.png)
+        ![](http://p1.bpimg.com/567571/bb4191279cb21de3.png)
+
+        eg. <figure class="highlight plain"><figcaption><span>row || column wrap || row-reverse wrap-reverse```</span></figcaption><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">- **justify-content** 安排（~~决定~~）子元素在主轴上如何分配空白空间的方式</div><div class="line">    </div><div class="line">    ```justify-content: flex-start | flex-end | center | space-between | space-around</div></pre></td></tr></table></figure>
+
+    ![](http://p1.bpimg.com/567571/b554af8f1c5d613b.png)
+
+- **align-items** 安排（~~决定~~）子元素在纵轴上的伸展方式
+
+    <figure class="highlight plain"><figcaption><span>flex-start | flex-end | center | baseline | stretch```</span></figcaption><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">    ![](http://p1.bpimg.com/567571/de0c8cd891e520b9.png)</div><div class="line">    </div><div class="line">- **align-content** 多条主轴如何在纵轴方向上面排布，跟justify-content 在主轴方向对齐元素的方式相似，如果只有一行该属性不生效</div><div class="line">    </div><div class="line">    ```align-content: flex-start | flex-end | center | space-between | space-around | stretch</div></pre></td></tr></table></figure>
+
+    ![](http://p1.bqimg.com/567571/a25d0fdca940eaa6.png)
+</code></pre><h2 id="flex-items档案"><a href="#flex-items档案" class="headerlink" title="flex-items档案"></a>flex-items档案</h2><ol>
+<li>元素名：flex item</li>
+<li>中文名：弹性子元素</li>
+<li>身份：flex container的马仔</li>
+<li>如何成为<del>马仔</del> <strong>flex-item</strong>：在flex container里面的子元素自动成为flex item，直接包含在容器中的连续文本会被包裹成一个匿名的flex item，空白的item不会被渲染出来</li>
+<li>职责：为其内容创建新的formatting context，flex item是flex-level的块，所以使用弹性容器的弹性格式化上下文而不是BFC（比如在BFC中margin会坍塌在弹性格式化上下文中不会 <a href="https://codepen.io/AubreyDDun/pen/dWYzbb" target="_blank" rel="external">戳</a>）</li>
+<li>比较酷的<strong>绝对定位</strong>的弹性子元素 特性速记<ul>
+<li>不参与flex布局，脱离文档流 （<a href="http://codepen.io/anon/pen/NjGjyV" target="_blank" rel="external">戳</a>）</li>
+<li><figure class="highlight plain"><figcaption><span>auto/stretch``` = ```align:flex-start``` 默认布局从主轴开始位置放置</span></figcaption><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div></pre></td><td class="code"><pre><div class="line">    - ```align-self: center``` 垂直方向居中([chrome遵守了这一规范，IE/FF没有，戳](http://codepen.io/AubreyDDun/pen/vmNZxM))</div><div class="line">7. 几个重要属性：</div><div class="line">    - **margins** 和 **paddings**：flex item的margins不会重叠（应该尽量避免使用百分比的margins、paddings，在不同浏览器下表现不一样，目前在IE/FF/Chrome还没有测试出来差别啦） 百分比的基准是浏览器宽度</div><div class="line">    </div><div class="line">    - 有order的元素渲染顺序会重置，相当于指定特定的子元素出现在什么位置</div><div class="line">    </div><div class="line">    - ```visibility: collapse```  [看例子](https://codepen.io/AubreyDDun/pen/MmaEzy)</div><div class="line">    </div><div class="line">    - **flex** 子元素的弹性</div><div class="line">        </div><div class="line">        ```flex: [ &lt;flex-grow&gt; &lt;flex-shrink&gt; &lt;flex-basis&gt;]``` 详见flex缩写探究</div><div class="line">    </div><div class="line">    - ```margin: auto``` 会“贪吃”掉所有空白的区域 [例子](https://codepen.io/AubreyDDun/pen/YVyYKP)</div><div class="line">    </div><div class="line">    - **align-self** 单独设置子元素（包括绝对定位的子元素）在纵轴上的定位方式，可以覆盖align-items属性</div><div class="line">    </div><div class="line">        ```align-self: auto | flex-start | flex-end | center | baseline | stretch``` （auto是跟container的flex-items属性一致）</div><div class="line"></div><div class="line">### flex缩写的探究</div><div class="line">```flex: [ &lt;flex-grow&gt; &lt;flex-shrink&gt; &lt;flex-basis&gt;]</div></pre></td></tr></table></figure>
+</li>
+</ul>
+</li>
+</ol>
+<ul>
+<li><strong>flex-grow</strong> 默认1 如何分配container中的空白空间，数值决定权重</li>
+<li><strong>flex-shrink</strong> 默认1 在空间不够的时候如何收缩元素</li>
+<li><strong>flex-basis</strong> 指定flex-item的默认尺寸 百分比以父级容器宽度为基数计算（<a href="https://madebymike.com.au/demos/flexbox-tester/" target="_blank" rel="external">Flexbox Tester</a>可以帮助理解flex item宽度的工具网站）</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>缩写</th>
+<th>flex-grow</th>
+<th>flex-shrink</th>
+<th>flex-basis</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>no declaration</td>
+<td>0</td>
+<td>1</td>
+<td>auto</td>
+</tr>
+<tr>
+<td>auto</td>
+<td>1</td>
+<td>1</td>
+<td>auto</td>
+</tr>
+<tr>
+<td>0</td>
+<td>0</td>
+<td>1</td>
+<td>0%</td>
+</tr>
+<tr>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+<td>0%</td>
+</tr>
+<tr>
+<td>none</td>
+<td>0</td>
+<td>0</td>
+<td>auto</td>
+</tr>
+</tbody>
+</table>
+<h3 id="弹性布局不是块级布局"><a href="#弹性布局不是块级布局" class="headerlink" title="弹性布局不是块级布局"></a>弹性布局不是块级布局</h3><ol>
+<li>float不生效</li>
+<li>相邻子元素的margin不会发生重叠</li>
+<li>多列布局column-*不起作用</li>
+<li>‘float’和’clear’对flex item不产生浮动或者清除浮动的效果，也不会让它脱离文档流</li>
+<li><figure class="highlight plain"><figcaption><span>item没效果</span></figcaption><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">6.  伪元素```::first-line```、```::first-letter```不适用于弹性容器，弹性容器也不会成为其父元素的first-line或者first-letter</div><div class="line"></div><div class="line">### 为什么你的flexbox不管用</div><div class="line">&quot;了解一个人并不代表什么，人是会变的&quot;——《重庆森林》。放在W3C规范和浏览器实现就是“了解一个属性并不代表什么，浏览器实现都是有差异的”。</div><div class="line"></div><div class="line">**W3C只是制定了规范**，但是遵守程度和实现效果各个浏览器是有所差异的。当你清楚你想实现什么效果而使用了对应的属性却发现不起作用，那么很可能是浏览器的差异造成的。比如上面提到的flex缩写，IE10的实现是不符合规范的</div><div class="line">Declaration | What it should mean | What it means in IE 10</div><div class="line">---|---|---</div><div class="line">(no flex declaration) | ```flex: 0 1 auto``` | ```flex: 0 0 auto</div></pre></td></tr></table></figure>
+</li>
+</ol>
+<figure class="highlight plain"><figcaption><span>1``` | ```flex: 1 1 0%``` | ```flex: 1 0 0px```</span></figcaption><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">```flex: auto``` | ```flex: 1 1 auto``` | ```flex: 1 0 auto</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><figcaption><span>initial``` | ```flex: 0 1 auto``` | ```flex: 0 0 auto```</span></figcaption><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">另外一个可能不常见但也能体现浏览器差异的是，嵌套的弹性容器的baseline不作为其他弹性子元素的对齐参考（可以在Firefox[戳例子](http://codepen.io/philipwalton/pen/vOOejZ)看看）。</div><div class="line"></div><div class="line">“当你在构建页面的时候使用了flexbox但是发现他并没有出现你预想的效果，可以在这里找到答案”——[flexbugs](https://github.com/philipwalton/flexbugs)</div><div class="line"></div><div class="line">### 关于flex.css</div><div class="line">flex.css就是对flex布局的一种封装，通过简洁的属性设置就能使得它完美的运行在移动端的各种浏览器，甚至能运行在ie10+的各种PC端浏览器中。是一种类似于标签属性声明的方式，指定flex属性。</div></pre></td></tr></table></figure>
+<!-- 设置主轴方向 -->
+<p><div class="flexbox" flex="dir: top"><br>    …<br></div><br>```</p>
+<table>
+<thead>
+<tr>
+<th>flex.css html</th>
+<th>css</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>dir: top</td>
+<td>flex-direction: cloumn</td>
+</tr>
+<tr>
+<td>main: center</td>
+<td>justify-content: center</td>
+</tr>
+<tr>
+<td>cross: top</td>
+<td>align-items: flex-start</td>
+</tr>
+</tbody>
+</table>
+<p><strong>试验flex布局的工具网站：</strong> <a href="http://the-echoplex.net/flexyboxes/" target="_blank" rel="external">flexbox playground and code generator</a></p>
+<h4 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h4><ol>
+<li><a href="https://www.w3.org/TR/css-flexbox-1/#placement" target="_blank" rel="external">W3C flexbox</a></li>
+<li><a href="https://gold.xitu.io/post/582d991cc4c9710054407dc3" target="_blank" rel="external">flex.css快速入门，极速布局</a></li>
+<li><a href="https://github.com/philipwalton/flexbugs" target="_blank" rel="external">flexbugs</a></li>
+<li><a href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/CSS_Flexible_Box_Layout/%E5%BC%B9%E6%80%A7%E6%A1%86%E7%9A%84%E9%AB%98%E7%BA%A7%E5%B8%83%E5%B1%80" target="_blank" rel="external">使用弹性盒子进行高级布局</a></li>
+<li><a href="http://www.ruanyifeng.com/blog/2015/07/flex-grammar.html?utm_source=tuicool" target="_blank" rel="external">Flex 布局教程：语法篇</a></li>
+</ol>
+<p>by DDun</p>
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+        
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2017/05/24/自定义webpack配置实战总结/" rel="next" title="自定义webpack配置实战总结">
+                <i class="fa fa-chevron-left"></i> 自定义webpack配置实战总结
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2017/05/30/MVVM学习笔记/" rel="prev" title="MVVM学习笔记">
+                MVVM学习笔记 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="/images/avatar.png"
+               alt="考拉前端团队" />
+          <p class="site-author-name" itemprop="name">考拉前端团队</p>
+           
+              <p class="site-description motion-element" itemprop="description"></p>
+          
+        </div>
+        <nav class="site-state motion-element">
+
+          
+            <div class="site-state-item site-state-posts">
+              <a href="/archives">
+                <span class="site-state-item-count">58</span>
+                <span class="site-state-item-name">日志</span>
+              </a>
+            </div>
+          
+
+          
+
+          
+
+        </nav>
+
+        
+
+        <div class="links-of-author motion-element">
+          
+        </div>
+
+        
+        
+
+        
+        
+
+        
+
+
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#前言"><span class="nav-number">1.</span> <span class="nav-text">前言</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#flex-items档案"><span class="nav-number">2.</span> <span class="nav-text">flex-items档案</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#弹性布局不是块级布局"><span class="nav-number">2.1.</span> <span class="nav-text">弹性布局不是块级布局</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#参考"><span class="nav-number">2.1.1.</span> <span class="nav-text">参考</span></a></li></ol></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy; 
+  <span itemprop="copyrightYear">2017</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">考拉前端团队</span>
+</div>
+
+
+<div class="powered-by">
+  由 <a class="theme-link" href="https://hexo.io">Hexo</a> 强力驱动
+</div>
+
+<div class="theme-info">
+  主题 -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Muse
+  </a>
+</div>
+
+
+        
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.1"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.1"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.1"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.1"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.1"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>
