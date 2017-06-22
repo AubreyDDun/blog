@@ -250,7 +250,7 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="https://blog.kaolafed.com/2017/04/21/JavaScript并发模型与Event Loop/">
+    <link itemprop="mainEntityOfPage" href="https://blog.kaolafed.com/2017/05/22/学习BFC/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="考拉前端团队">
@@ -272,8 +272,8 @@
             
               
                 
-                <a class="post-title-link" href="/2017/04/21/JavaScript并发模型与Event Loop/" itemprop="url">
-                  JavaScript并发模型与Event Loop
+                <a class="post-title-link" href="/2017/05/22/学习BFC/" itemprop="url">
+                  学习BFC
                 </a>
               
             
@@ -289,8 +289,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-04-21T00:00:00+08:00">
-                2017-04-21
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-05-22T00:00:00+08:00">
+                2017-05-22
               </time>
             
 
@@ -325,11 +325,10 @@
 
       
         
-          <h2 id="并发模型可视化描述"><a href="#并发模型可视化描述" class="headerlink" title="并发模型可视化描述"></a>并发模型可视化描述</h2><p><img src="https://mdn.mozillademos.org/files/4617/default.svg" alt="model.svg"></p>
-<p>如上图所示，Javascript执行引擎的主线程运行的时候，产生堆（heap）和栈（stack），程序中代码依次进入栈中等待执行，若执行时遇到异步方法，该异步方法会被添加到用于回调的队列（queue）中【即JavaScript执行引擎的主线程拥有一个执行栈/堆和一个任务队列】。</p>
+          <h2 id="什么是BFC"><a href="#什么是BFC" class="headerlink" title="什么是BFC"></a>什么是BFC</h2><p>BFC全称是Block Formatting Context，即块格式化上下文。它是CSS2.1规范定义的，关于CSS渲染定位的一个概念。要明白BFC到底是什么，首先来看看什么是视觉格式化模型。</p>
           <!--noindex-->
           <div class="post-button text-center">
-            <a class="btn" href="/2017/04/21/JavaScript并发模型与Event Loop/#more" rel="contents">
+            <a class="btn" href="/2017/05/22/学习BFC/#more" rel="contents">
               阅读全文 &raquo;
             </a>
           </div>
@@ -375,7 +374,7 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="https://blog.kaolafed.com/2017/04/19/结合CleanCode的一次代码重构实践/">
+    <link itemprop="mainEntityOfPage" href="https://blog.kaolafed.com/2017/05/15/当产品、后端、QA、你自己说了这些话，就要警惕了！/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="考拉前端团队">
@@ -397,8 +396,8 @@
             
               
                 
-                <a class="post-title-link" href="/2017/04/19/结合CleanCode的一次代码重构实践/" itemprop="url">
-                  结合CleanCode的一次代码重构实践
+                <a class="post-title-link" href="/2017/05/15/当产品、后端、QA、你自己说了这些话，就要警惕了！/" itemprop="url">
+                  当产品/后端/QA/你自己说了这些话，就要警惕了！
                 </a>
               
             
@@ -414,628 +413,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-04-19T00:00:00+08:00">
-                2017-04-19
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <p>类目参谋近期进行版本迭代，添加新功能。原本代码开发已久，可优化空间较大也为了便于日后的维护和拓展，决定页面重构。我参与了其中交易构成页面的代码重构。（数据门户 - 类目参谋 - 交易分析 - 交易构成）</p>
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2017/04/19/结合CleanCode的一次代码重构实践/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="https://blog.kaolafed.com/2017/04/19/如何理解JS中的闭包/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="考拉前端团队">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.png">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="考拉前端团队博客">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2017/04/19/如何理解JS中的闭包/" itemprop="url">
-                  如何理解JS中的闭包
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-04-19T00:00:00+08:00">
-                2017-04-19
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <h2 id="如何理解JS中的闭包？"><a href="#如何理解JS中的闭包？" class="headerlink" title="如何理解JS中的闭包？"></a>如何理解JS中的闭包？</h2><p>对于函数是一等对象的语言来说，下面两种典型的情况，会存在变量如何取值的问题。</p>
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2017/04/19/如何理解JS中的闭包/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="https://blog.kaolafed.com/2017/04/07/SVG动画实践篇-无中生有的线条动画/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="考拉前端团队">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.png">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="考拉前端团队博客">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2017/04/07/SVG动画实践篇-无中生有的线条动画/" itemprop="url">
-                  SVG动画实践篇-无中生有的线条动画
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-04-07T00:00:00+08:00">
-                2017-04-07
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <h2 id="说明"><a href="#说明" class="headerlink" title="说明"></a>说明</h2><p>这个动画实现的是线条动画,主要用到的是 SVG 的 path 标签。</p>
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2017/04/07/SVG动画实践篇-无中生有的线条动画/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="https://blog.kaolafed.com/2017/04/04/SVG动画实践篇-音量变化效果/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="考拉前端团队">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.png">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="考拉前端团队博客">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2017/04/04/SVG动画实践篇-音量变化效果/" itemprop="url">
-                  SVG动画实践篇-音量变化效果
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-04-04T00:00:00+08:00">
-                2017-04-04
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <h2 id="说明"><a href="#说明" class="headerlink" title="说明"></a>说明</h2><p>这个动画的效果就是多个线条的高度发生变化,使用了两种写法(css,svg)来实现。</p>
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2017/04/04/SVG动画实践篇-音量变化效果/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="https://blog.kaolafed.com/2017/04/01/FormData介绍与使用/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="考拉前端团队">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.png">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="考拉前端团队博客">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2017/04/01/FormData介绍与使用/" itemprop="url">
-                  FormData介绍与使用
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-04-01T00:00:00+08:00">
-                2017-04-01
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <h2 id="FormData"><a href="#FormData" class="headerlink" title="FormData"></a>FormData</h2><p>XMLHttpRequest Level 2添加了一个新的接口FormData.在开发中使用后，觉得是form表单的加强版。可以异步的，灵活的发送数据，并且包括上传二进制文件</p>
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2017/04/01/FormData介绍与使用/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="https://blog.kaolafed.com/2017/04/01/Promise对象剖析/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="考拉前端团队">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.png">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="考拉前端团队博客">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2017/04/01/Promise对象剖析/" itemprop="url">
-                  Promise对象剖析
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-04-01T00:00:00+08:00">
-                2017-04-01
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-05-15T00:00:00+08:00">
+                2017-05-15
               </time>
             
 
@@ -1071,11 +450,12 @@
       
         
           <blockquote>
-<p>作为已经成为标准规范的Promise对象，如何使用想必大家都很了解能够正确的应用，本文从分析Promise对象和then方法源码入手来探索Promise到底是如何实现，文章篇幅有限，如有不对的地方欢迎指正。</p>
+<p>如下观点不一定适用于所有场景</p>
+<p>欢迎小伙伴踊跃补充！！</p>
 </blockquote>
           <!--noindex-->
           <div class="post-button text-center">
-            <a class="btn" href="/2017/04/01/Promise对象剖析/#more" rel="contents">
+            <a class="btn" href="/2017/05/15/当产品、后端、QA、你自己说了这些话，就要警惕了！/#more" rel="contents">
               阅读全文 &raquo;
             </a>
           </div>
@@ -1121,7 +501,7 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="https://blog.kaolafed.com/2017/03/31/从 history 到 SPA/">
+    <link itemprop="mainEntityOfPage" href="https://blog.kaolafed.com/2017/05/15/API与NEI定义规范/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="考拉前端团队">
@@ -1143,8 +523,8 @@
             
               
                 
-                <a class="post-title-link" href="/2017/03/31/从 history 到 SPA/" itemprop="url">
-                  从 history 到 SPA
+                <a class="post-title-link" href="/2017/05/15/API与NEI定义规范/" itemprop="url">
+                  API与NEI定义规范
                 </a>
               
             
@@ -1160,8 +540,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-03-31T00:00:00+08:00">
-                2017-03-31
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-05-15T00:00:00+08:00">
+                2017-05-15
               </time>
             
 
@@ -1196,10 +576,17 @@
 
       
         
-          <p>前后端分离目前算是一种共识了，特别是前端 MV* 框架的兴起，前端更倾向于按照框架写代码，之后打包再交由后端 render。因此，如果传统的根据路由打包为多个入口会比较蛋疼，单一入口的路由管理算是 <a href="https://en.wikipedia.org/wiki/Single-page_application" target="_blank" rel="external">SPA</a> 的一个关键部分了，而这里离不开 <a href="https://en.wikipedia.org/wiki/History_of_the_web_browser" target="_blank" rel="external">history</a>。</p>
+          <!-- 为了更方便归档，请先完善以上信息，正文贴下面 -->
+<!--
+注意点：
+0. 文章中的资源（主要是图片）引用请使用 HTTPS
+1. 文章末可以加上自己的署名，如： by [Kaola](http://www.kaola.com)
+2. 最好不要用 NOS 图床，感觉加防盗链是迟早的事
+-->
+<h1 id="API规范"><a href="#API规范" class="headerlink" title="API规范"></a>API规范</h1><p>API规范包括路径命名规范、请求方式规范，请求参数规范、返回数据规范与特殊结构规范五部分；</p>
           <!--noindex-->
           <div class="post-button text-center">
-            <a class="btn" href="/2017/03/31/从 history 到 SPA/#more" rel="contents">
+            <a class="btn" href="/2017/05/15/API与NEI定义规范/#more" rel="contents">
               阅读全文 &raquo;
             </a>
           </div>
@@ -1245,7 +632,7 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="https://blog.kaolafed.com/2017/03/31/chrome插件开发简介（二）——如何添“加浏览器扩展白名单”/">
+    <link itemprop="mainEntityOfPage" href="https://blog.kaolafed.com/2017/05/11/实践中的前后端分离/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="考拉前端团队">
@@ -1267,8 +654,8 @@
             
               
                 
-                <a class="post-title-link" href="/2017/03/31/chrome插件开发简介（二）——如何添“加浏览器扩展白名单”/" itemprop="url">
-                  chrome插件开发简介（二）——如何添“加浏览器扩展白名单”
+                <a class="post-title-link" href="/2017/05/11/实践中的前后端分离/" itemprop="url">
+                  实践中的前后端分离
                 </a>
               
             
@@ -1284,8 +671,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-03-31T00:00:00+08:00">
-                2017-03-31
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-05-11T23:07:48+08:00">
+                2017-05-11
               </time>
             
 
@@ -1320,13 +707,10 @@
 
       
         
-          <h1 id="chrome插件开发简介（二）——如何添“加浏览器扩展白名单”"><a href="#chrome插件开发简介（二）——如何添“加浏览器扩展白名单”" class="headerlink" title="chrome插件开发简介（二）——如何添“加浏览器扩展白名单”"></a>chrome插件开发简介（二）——如何添“加浏览器扩展白名单”</h1><blockquote>
-<p>没有在Chrome应用商店web store上架发布的插件，如果没有添加到白名单里，下一次重启Chrome就会被禁用，而且无法手动启用，除非删掉重新添加。<br>可以通过添加白名单可以一劳永逸地解决这个问题。</p>
-</blockquote>
-<p>下面我们以“将日报插件添加到白名单”为例，讲解步骤</p>
+          <p>相信前后端分离这个词，早已流传甚广，大家一些自己的理解，但可能有些人的观点有稍许偏差：我们要搞 SPA，全AJAX，那才是前后端分离了。</p>
           <!--noindex-->
           <div class="post-button text-center">
-            <a class="btn" href="/2017/03/31/chrome插件开发简介（二）——如何添“加浏览器扩展白名单”/#more" rel="contents">
+            <a class="btn" href="/2017/05/11/实践中的前后端分离/#more" rel="contents">
               阅读全文 &raquo;
             </a>
           </div>
@@ -1372,7 +756,7 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="https://blog.kaolafed.com/2017/03/31/chrome插件开发简介（一）——开发入门/">
+    <link itemprop="mainEntityOfPage" href="https://blog.kaolafed.com/2017/05/02/如何编写Hexo主题/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="考拉前端团队">
@@ -1394,8 +778,8 @@
             
               
                 
-                <a class="post-title-link" href="/2017/03/31/chrome插件开发简介（一）——开发入门/" itemprop="url">
-                  chrome插件开发简介（一）——开发入门
+                <a class="post-title-link" href="/2017/05/02/如何编写Hexo主题/" itemprop="url">
+                  如何编写Hexo主题
                 </a>
               
             
@@ -1411,8 +795,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-03-31T00:00:00+08:00">
-                2017-03-31
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-05-02T00:00:00+08:00">
+                2017-05-02
               </time>
             
 
@@ -1447,13 +831,635 @@
 
       
         
-          <h1 id="chrome插件开发简介（一）——开发入门"><a href="#chrome插件开发简介（一）——开发入门" class="headerlink" title="chrome插件开发简介（一）——开发入门"></a>chrome插件开发简介（一）——开发入门</h1><blockquote>
-<p>chrome作为目前最流行的浏览器，备受前端推崇，原因除了其对于前端标准的支持这一大核心原因之外，还有就是其强大的扩展性，<br>基于其开发规范实现的插件如今已经非常庞大，在国内也是欣欣向荣，<br>如天猫开发了大量的扩展，用于检测页面质量以及页面性能，淘宝开发了许多的扩展以供运营工具的优化等等。其强大性不言而喻。</p>
-</blockquote>
-<p>这里我们来讲一下其插件开发</p>
+          <p>最开始折腾Hexo的时候感觉这东西很神奇，通过他和github搭配就能生成免费的静态博客，而且还有丰富的主题可以选择，当我刚入Hexo的时候默认主题是<code>landscape</code>，后来又使用过<code>NexT</code>，是一款很漂亮的主题，但是除此之外，还有很多好看的主题，我很好奇这些主题都是怎么写出来的，于是乎就仿照<code>landscape</code>主题开始研究，写自己的主题，也就是<a href="http://www.showonne.com/" target="_blank" rel="external">我自己的博客</a>正在用的主题，项目地址在<a href="https://github.com/showonne/hexo_showonne" target="_blank" rel="external">这里</a>。</p>
           <!--noindex-->
           <div class="post-button text-center">
-            <a class="btn" href="/2017/03/31/chrome插件开发简介（一）——开发入门/#more" rel="contents">
+            <a class="btn" href="/2017/05/02/如何编写Hexo主题/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="https://blog.kaolafed.com/2017/05/01/意外发现regular v0.4.3的一个bug，它竟然这么干的/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="考拉前端团队">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="考拉前端团队博客">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2017/05/01/意外发现regular v0.4.3的一个bug，它竟然这么干的/" itemprop="url">
+                  意外发现regular v0.4.3的一个bug，它竟然这么干的
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-05-01T00:00:00+08:00">
+                2017-05-01
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <p>哈哈，标题很有吸引力吧。</p>
+<p>言归正传，前几天在页面搭建工程下进行开发时，碰到了一个很困惑的问题，很容易复现，也很容易理解，就直接上代码吧：</p>
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2017/05/01/意外发现regular v0.4.3的一个bug，它竟然这么干的/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="https://blog.kaolafed.com/2017/04/30/vuejs学习之路/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="考拉前端团队">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="考拉前端团队博客">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2017/04/30/vuejs学习之路/" itemprop="url">
+                  vuejs学习之路
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-04-30T00:00:00+08:00">
+                2017-04-30
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <blockquote>
+<p>最近在做的种草项目，其中的管理后台采用了<code>vue.js</code>。为什么会选用vue呢，一是因为一个管理后台，不需要考虑兼容性、seo这些前台系统需要关心的点，后台系统的交互形式又特别适合做成一个单页应用，而vue不兼容IE8及以下版本，vue的route库很好的支持单页应用，适合我们的项目；再者，当然是因为vue是目前前端圈子很火很fashion的技术框架呀，截至目前有接近7k的fork，开发者们的参与热情堪称空前，技术社区氛围也很好，持续的版本更新，是一款被各大小项目考验过的稳定框架，岂有不用之理？</p>
+</blockquote>
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2017/04/30/vuejs学习之路/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="https://blog.kaolafed.com/2017/04/28/让我们来谈谈人生：关于技术人员能力的瞎想/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="考拉前端团队">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="考拉前端团队博客">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2017/04/28/让我们来谈谈人生：关于技术人员能力的瞎想/" itemprop="url">
+                  让我们来谈谈人生：关于技术人员能力的瞎想
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-04-28T00:00:00+08:00">
+                2017-04-28
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <p>技术人总有一个很完美的假想，开发能力够强，就是真正能力强。</p>
+<p>但现实并不是这么完美，人的精力有限，能真正投入的事情不多，况且工作中还有一大堆业务需求要展开。</p>
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2017/04/28/让我们来谈谈人生：关于技术人员能力的瞎想/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="https://blog.kaolafed.com/2017/04/26/webpack构建之hash缓存的利用/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="考拉前端团队">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="考拉前端团队博客">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2017/04/26/webpack构建之hash缓存的利用/" itemprop="url">
+                  webpack构建之hash缓存的利用
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-04-26T00:00:00+08:00">
+                2017-04-26
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <h1 id="webpack构建之hash缓存的利用"><a href="#webpack构建之hash缓存的利用" class="headerlink" title="webpack构建之hash缓存的利用"></a>webpack构建之hash缓存的利用</h1><p>众所周知，优化一个页面的方法之一就是利用浏览器的缓存机制，在文件名不改变的情况下，使客户端不用频繁向服务端请求和重复下载相同的资源，节约了流量的开销。</p>
+<p>现在前端的主要构建工具就是使用webpack，现在就说说使用webpack时遇到的hash的坑。</p>
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2017/04/26/webpack构建之hash缓存的利用/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="https://blog.kaolafed.com/2017/04/25/SVG Sprite 使用简介/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="考拉前端团队">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="考拉前端团队博客">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2017/04/25/SVG Sprite 使用简介/" itemprop="url">
+                  SVG Sprite 使用简介
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-04-25T00:00:00+08:00">
+                2017-04-25
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <h1 id="SVG简介"><a href="#SVG简介" class="headerlink" title="SVG简介"></a>SVG简介</h1><p>SVG即可缩放矢量图形 (Scalable Vector Graphics)的简称, 是一种用来描述二维矢量图形的XML标记语言. SVG图形不依赖于分辨率, 因此图形不会因为放大而显示出明显的锯齿边缘.</p>
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2017/04/25/SVG Sprite 使用简介/#more" rel="contents">
               阅读全文 &raquo;
             </a>
           </div>
@@ -1494,7 +1500,7 @@
 
   
   <nav class="pagination">
-    <a class="extend prev" rel="prev" href="/page/2/"><i class="fa fa-angle-left"></i></a><a class="page-number" href="/">1</a><a class="page-number" href="/page/2/">2</a><span class="page-number current">3</span><a class="page-number" href="/page/4/">4</a><span class="space">&hellip;</span><a class="page-number" href="/page/6/">6</a><a class="extend next" rel="next" href="/page/4/"><i class="fa fa-angle-right"></i></a>
+    <a class="extend prev" rel="prev" href="/page/2/"><i class="fa fa-angle-left"></i></a><a class="page-number" href="/">1</a><a class="page-number" href="/page/2/">2</a><span class="page-number current">3</span><a class="page-number" href="/page/4/">4</a><span class="space">&hellip;</span><a class="page-number" href="/page/7/">7</a><a class="extend next" rel="next" href="/page/4/"><i class="fa fa-angle-right"></i></a>
   </nav>
 
 
@@ -1539,7 +1545,7 @@
           
             <div class="site-state-item site-state-posts">
               <a href="/archives">
-                <span class="site-state-item-count">56</span>
+                <span class="site-state-item-count">67</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>
