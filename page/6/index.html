@@ -250,7 +250,7 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="https://blog.kaolafed.com/2017/03/24/用Nodejs开发命令行工具/">
+    <link itemprop="mainEntityOfPage" href="https://blog.kaolafed.com/2017/04/24/CSS Masonry Layouts（1）—— multi-columns/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="考拉前端团队">
@@ -272,8 +272,8 @@
             
               
                 
-                <a class="post-title-link" href="/2017/03/24/用Nodejs开发命令行工具/" itemprop="url">
-                  用Nodejs开发命令行工具
+                <a class="post-title-link" href="/2017/04/24/CSS Masonry Layouts（1）—— multi-columns/" itemprop="url">
+                  CSS Masonry Layouts（1）—— multi-columns
                 </a>
               
             
@@ -289,8 +289,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-03-24T00:00:00+08:00">
-                2017-03-24
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-04-24T00:00:00+08:00">
+                2017-04-24
               </time>
             
 
@@ -325,33 +325,11 @@
 
       
         
-          <!-- START doctoc generated TOC please keep comment here to allow auto update -->
-<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
-<p><strong>Table of Contents</strong>  <em>generated with <a href="https://github.com/thlorenz/doctoc" target="_blank" rel="external">DocToc</a></em></p>
-<ul>
-<li><a href="#%E5%89%8D%E8%A8%80">前言</a></li>
-<li><a href="#%E5%87%86%E5%A4%87%E5%B7%A5%E4%BD%9C">准备工作</a></li>
-<li><a href="#hello-world">Hello World</a></li>
-<li><a href="#%E5%86%85%E5%AE%B9%E8%AF%A6%E8%A7%A3">内容详解</a><ul>
-<li><a href="#indexjs">index.js</a></li>
-<li><a href="#packagejson">package.json</a></li>
-<li><a href="#npm-link%E5%91%BD%E4%BB%A4">npm link命令</a></li>
-</ul>
-</li>
-<li><a href="#%E5%8F%91%E5%B8%83%E9%A1%B9%E7%9B%AE%E5%88%B0npm%E5%AE%98%E7%BD%91%E4%BE%9B%E5%A4%A7%E5%AE%B6%E4%BD%BF%E7%94%A8">发布项目到npm官网供大家使用</a></li>
-<li><a href="#%E5%A6%82%E4%BD%95%E5%A4%84%E7%90%86%E5%91%BD%E4%BB%A4%E8%A1%8C%E5%8F%82%E6%95%B0">如何处理命令行参数</a></li>
-<li><a href="#%E5%8D%95%E5%85%83%E6%B5%8B%E8%AF%95">单元测试</a></li>
-<li><a href="#%E8%AE%A9%E4%BD%A0%E7%9A%84%E9%A1%B9%E7%9B%AE%E6%98%BE%E5%BE%97%E6%AD%A3%E8%A7%84github-badges">让你的项目显得正规(github badges)</a><ul>
-<li><a href="#%E6%8C%81%E7%BB%AD%E9%9B%86%E6%88%90%EF%BC%88ci%EF%BC%89%E5%92%8C%E4%BB%A3%E7%A0%81%E8%A6%86%E7%9B%96%E7%8E%87">持续集成（CI）和代码覆盖率</a></li>
-</ul>
-</li>
-<li><a href="#%E5%B8%B8%E7%94%A8%E7%9A%84%E5%BA%93">常用的库</a></li>
-<li><a href="#%E5%8F%82%E8%80%83%E8%B5%84%E6%96%99">参考资料</a></li>
-</ul>
-<!-- END doctoc generated TOC please keep comment here to allow auto update -->
+          <h2 id="CSS-Masonry-Layouts（1）——-multi-columns"><a href="#CSS-Masonry-Layouts（1）——-multi-columns" class="headerlink" title="CSS Masonry Layouts（1）—— multi-columns"></a>CSS Masonry Layouts（1）—— multi-columns</h2><p>Masonry Layouts —— 瀑布流布局，核心是一个网格布局，每行包含的内容列表的高度是不可控的，并且，每个内容列表呈堆栈状排列。称作瀑布流，最关键的是——<strong>各堆栈间没有多余的间距差</strong>（将整个布局看做一个大的容器，最新进来的内容元素，永远在高度最短的那一列上）。具体如下图所示：</p>
+<p><img src="https://cdn.int64ago.org/srwap2bn.jpeg" alt=""></p>
           <!--noindex-->
           <div class="post-button text-center">
-            <a class="btn" href="/2017/03/24/用Nodejs开发命令行工具/#more" rel="contents">
+            <a class="btn" href="/2017/04/24/CSS Masonry Layouts（1）—— multi-columns/#more" rel="contents">
               阅读全文 &raquo;
             </a>
           </div>
@@ -397,7 +375,7 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="https://blog.kaolafed.com/2017/03/23/Clean Code 阅读总结/">
+    <link itemprop="mainEntityOfPage" href="https://blog.kaolafed.com/2017/04/21/JavaScript并发模型与Event Loop/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="考拉前端团队">
@@ -419,8 +397,8 @@
             
               
                 
-                <a class="post-title-link" href="/2017/03/23/Clean Code 阅读总结/" itemprop="url">
-                  Clean Code 阅读总结
+                <a class="post-title-link" href="/2017/04/21/JavaScript并发模型与Event Loop/" itemprop="url">
+                  JavaScript并发模型与Event Loop
                 </a>
               
             
@@ -436,8 +414,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-03-23T00:00:00+08:00">
-                2017-03-23
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-04-21T00:00:00+08:00">
+                2017-04-21
               </time>
             
 
@@ -472,10 +450,11 @@
 
       
         
-          <h2 id="1-开始"><a href="#1-开始" class="headerlink" title="1 开始"></a>1 开始</h2><p>本文是在阅读 <code>clean code</code> 时的一些总结，原书是基于 Java 的，这里将其中的一些个人认为实用性较强且容易与日常业务开发结合的一些原则重新进行整理，并参考了 <a href="https://github.com/ryanmcdermott/clean-code-javascript" target="_blank" rel="external">clean-code-javascript</a> 一文给出了一些代码实例，希望本文能够给日常开发编码和重构作出一些参考。</p>
+          <h2 id="并发模型可视化描述"><a href="#并发模型可视化描述" class="headerlink" title="并发模型可视化描述"></a>并发模型可视化描述</h2><p><img src="https://mdn.mozillademos.org/files/4617/default.svg" alt="model.svg"></p>
+<p>如上图所示，Javascript执行引擎的主线程运行的时候，产生堆（heap）和栈（stack），程序中代码依次进入栈中等待执行，若执行时遇到异步方法，该异步方法会被添加到用于回调的队列（queue）中【即JavaScript执行引擎的主线程拥有一个执行栈/堆和一个任务队列】。</p>
           <!--noindex-->
           <div class="post-button text-center">
-            <a class="btn" href="/2017/03/23/Clean Code 阅读总结/#more" rel="contents">
+            <a class="btn" href="/2017/04/21/JavaScript并发模型与Event Loop/#more" rel="contents">
               阅读全文 &raquo;
             </a>
           </div>
@@ -521,7 +500,7 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="https://blog.kaolafed.com/2017/03/23/一道面试题目引发的思考/">
+    <link itemprop="mainEntityOfPage" href="https://blog.kaolafed.com/2017/04/19/结合CleanCode的一次代码重构实践/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="考拉前端团队">
@@ -543,8 +522,8 @@
             
               
                 
-                <a class="post-title-link" href="/2017/03/23/一道面试题目引发的思考/" itemprop="url">
-                  一道面试题目引发的思考
+                <a class="post-title-link" href="/2017/04/19/结合CleanCode的一次代码重构实践/" itemprop="url">
+                  结合CleanCode的一次代码重构实践
                 </a>
               
             
@@ -560,8 +539,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-03-23T00:00:00+08:00">
-                2017-03-23
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-04-19T00:00:00+08:00">
+                2017-04-19
               </time>
             
 
@@ -596,12 +575,10 @@
 
       
         
-          <h2 id="起因"><a href="#起因" class="headerlink" title="起因"></a>起因</h2><blockquote>
-<p><strong>多列布局</strong>是前端一个经典的反复被提及的面试题目，最典型的即两列，左列定宽菜单栏，右列变宽为内容区域。</p>
-</blockquote>
+          <p>类目参谋近期进行版本迭代，添加新功能。原本代码开发已久，可优化空间较大也为了便于日后的维护和拓展，决定页面重构。我参与了其中交易构成页面的代码重构。（数据门户 - 类目参谋 - 交易分析 - 交易构成）</p>
           <!--noindex-->
           <div class="post-button text-center">
-            <a class="btn" href="/2017/03/23/一道面试题目引发的思考/#more" rel="contents">
+            <a class="btn" href="/2017/04/19/结合CleanCode的一次代码重构实践/#more" rel="contents">
               阅读全文 &raquo;
             </a>
           </div>
@@ -647,7 +624,7 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="https://blog.kaolafed.com/2017/03/23/浅谈HTML5 Web Worker/">
+    <link itemprop="mainEntityOfPage" href="https://blog.kaolafed.com/2017/04/19/如何理解JS中的闭包/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="考拉前端团队">
@@ -669,8 +646,8 @@
             
               
                 
-                <a class="post-title-link" href="/2017/03/23/浅谈HTML5 Web Worker/" itemprop="url">
-                  浅谈HTML5 Web Worker
+                <a class="post-title-link" href="/2017/04/19/如何理解JS中的闭包/" itemprop="url">
+                  如何理解JS中的闭包
                 </a>
               
             
@@ -686,8 +663,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-03-23T00:00:00+08:00">
-                2017-03-23
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-04-19T00:00:00+08:00">
+                2017-04-19
               </time>
             
 
@@ -722,10 +699,10 @@
 
       
         
-          <h1 id="浅谈HTML5-Web-Worker"><a href="#浅谈HTML5-Web-Worker" class="headerlink" title="浅谈HTML5 Web Worker"></a>浅谈HTML5 Web Worker</h1><h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>总所周知，Javascript是运行在单线程环境中，也就是说无法同时运行多个脚本。假设用户点击一个按钮，触发了一段用于计算的Javascript代码，那么在这段代码执行完毕之前，页面是无法响应用户操作的。但是，如果将这段代码交给Web Worker去运行的话，那么情况就不一样了：浏览器会在后台启动一个独立的worker线程来专门负责这段代码的运行，因此，页面在这段Javascript代码运行期间依然可以响应用户的其他操作。</p>
+          <h2 id="如何理解JS中的闭包？"><a href="#如何理解JS中的闭包？" class="headerlink" title="如何理解JS中的闭包？"></a>如何理解JS中的闭包？</h2><p>对于函数是一等对象的语言来说，下面两种典型的情况，会存在变量如何取值的问题。</p>
           <!--noindex-->
           <div class="post-button text-center">
-            <a class="btn" href="/2017/03/23/浅谈HTML5 Web Worker/#more" rel="contents">
+            <a class="btn" href="/2017/04/19/如何理解JS中的闭包/#more" rel="contents">
               阅读全文 &raquo;
             </a>
           </div>
@@ -771,7 +748,7 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="https://blog.kaolafed.com/2017/03/22/浅谈浏览器本地存储-indexedDB/">
+    <link itemprop="mainEntityOfPage" href="https://blog.kaolafed.com/2017/04/07/SVG动画实践篇-无中生有的线条动画/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="考拉前端团队">
@@ -793,8 +770,8 @@
             
               
                 
-                <a class="post-title-link" href="/2017/03/22/浅谈浏览器本地存储-indexedDB/" itemprop="url">
-                  浅谈浏览器本地存储-indexedDB
+                <a class="post-title-link" href="/2017/04/07/SVG动画实践篇-无中生有的线条动画/" itemprop="url">
+                  SVG动画实践篇-无中生有的线条动画
                 </a>
               
             
@@ -810,8 +787,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-03-22T00:00:00+08:00">
-                2017-03-22
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-04-07T00:00:00+08:00">
+                2017-04-07
               </time>
             
 
@@ -846,10 +823,10 @@
 
       
         
-          <p>indexedDB 是 HTML5 提供的一种本地存储，一般用户保存大量用户数据并要求数据之间有搜索需要的场景,当网络断开的时候，可以做一些离线应用，它比 SQL 方便，不用去写一些特定的语句对数据进行操作，数据格式为 json。</p>
+          <h2 id="说明"><a href="#说明" class="headerlink" title="说明"></a>说明</h2><p>这个动画实现的是线条动画,主要用到的是 SVG 的 path 标签。</p>
           <!--noindex-->
           <div class="post-button text-center">
-            <a class="btn" href="/2017/03/22/浅谈浏览器本地存储-indexedDB/#more" rel="contents">
+            <a class="btn" href="/2017/04/07/SVG动画实践篇-无中生有的线条动画/#more" rel="contents">
               阅读全文 &raquo;
             </a>
           </div>
@@ -895,7 +872,7 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="https://blog.kaolafed.com/2017/03/22/JavaScript设计模式/">
+    <link itemprop="mainEntityOfPage" href="https://blog.kaolafed.com/2017/04/04/SVG动画实践篇-音量变化效果/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="考拉前端团队">
@@ -917,8 +894,8 @@
             
               
                 
-                <a class="post-title-link" href="/2017/03/22/JavaScript设计模式/" itemprop="url">
-                  JavaScript设计模式
+                <a class="post-title-link" href="/2017/04/04/SVG动画实践篇-音量变化效果/" itemprop="url">
+                  SVG动画实践篇-音量变化效果
                 </a>
               
             
@@ -934,8 +911,132 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-03-22T00:00:00+08:00">
-                2017-03-22
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-04-04T00:00:00+08:00">
+                2017-04-04
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <h2 id="说明"><a href="#说明" class="headerlink" title="说明"></a>说明</h2><p>这个动画的效果就是多个线条的高度发生变化,使用了两种写法(css,svg)来实现。</p>
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2017/04/04/SVG动画实践篇-音量变化效果/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="https://blog.kaolafed.com/2017/04/01/Promise对象剖析/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="考拉前端团队">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="考拉前端团队博客">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2017/04/01/Promise对象剖析/" itemprop="url">
+                  Promise对象剖析
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-04-01T00:00:00+08:00">
+                2017-04-01
               </time>
             
 
@@ -971,11 +1072,11 @@
       
         
           <blockquote>
-<p>设计模式的定义：在面向对象软件设计过程中针对特定问题的简洁而优雅的解决方案</p>
+<p>作为已经成为标准规范的Promise对象，如何使用想必大家都很了解能够正确的应用，本文从分析Promise对象和then方法源码入手来探索Promise到底是如何实现，文章篇幅有限，如有不对的地方欢迎指正。</p>
 </blockquote>
           <!--noindex-->
           <div class="post-button text-center">
-            <a class="btn" href="/2017/03/22/JavaScript设计模式/#more" rel="contents">
+            <a class="btn" href="/2017/04/01/Promise对象剖析/#more" rel="contents">
               阅读全文 &raquo;
             </a>
           </div>
@@ -1021,7 +1122,7 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="https://blog.kaolafed.com/2017/03/22/feedback 开发过程中遇到的问题及解决/">
+    <link itemprop="mainEntityOfPage" href="https://blog.kaolafed.com/2017/04/01/FormData介绍与使用/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="考拉前端团队">
@@ -1043,8 +1144,8 @@
             
               
                 
-                <a class="post-title-link" href="/2017/03/22/feedback 开发过程中遇到的问题及解决/" itemprop="url">
-                  feedback 开发过程中遇到的问题及解决
+                <a class="post-title-link" href="/2017/04/01/FormData介绍与使用/" itemprop="url">
+                  FormData介绍与使用
                 </a>
               
             
@@ -1060,8 +1161,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-03-22T00:00:00+08:00">
-                2017-03-22
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-04-01T00:00:00+08:00">
+                2017-04-01
               </time>
             
 
@@ -1096,12 +1197,10 @@
 
       
         
-          <h2 id="由来"><a href="#由来" class="headerlink" title="由来:"></a>由来:</h2><p>后台系统多, 用户也多.用户在使用过程中对系统中不合理或影响工作效率的地方, 需要有一个反馈的渠道.</p>
-<p>如果每个系统都做一个反馈收集页, 将是重复的工作, 会耗费大量的人力.</p>
-<p>因此, 最好能有一个统一的东西, 插入到需要收集反馈的系统中.</p>
+          <h2 id="FormData"><a href="#FormData" class="headerlink" title="FormData"></a>FormData</h2><p>XMLHttpRequest Level 2添加了一个新的接口FormData.在开发中使用后，觉得是form表单的加强版。可以异步的，灵活的发送数据，并且包括上传二进制文件</p>
           <!--noindex-->
           <div class="post-button text-center">
-            <a class="btn" href="/2017/03/22/feedback 开发过程中遇到的问题及解决/#more" rel="contents">
+            <a class="btn" href="/2017/04/01/FormData介绍与使用/#more" rel="contents">
               阅读全文 &raquo;
             </a>
           </div>
@@ -1147,7 +1246,7 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="https://blog.kaolafed.com/2017/03/20/前端重构感想/">
+    <link itemprop="mainEntityOfPage" href="https://blog.kaolafed.com/2017/03/31/chrome插件开发简介（二）——如何添“加浏览器扩展白名单”/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="考拉前端团队">
@@ -1169,8 +1268,8 @@
             
               
                 
-                <a class="post-title-link" href="/2017/03/20/前端重构感想/" itemprop="url">
-                  前端重构感想
+                <a class="post-title-link" href="/2017/03/31/chrome插件开发简介（二）——如何添“加浏览器扩展白名单”/" itemprop="url">
+                  chrome插件开发简介（二）——如何添“加浏览器扩展白名单”
                 </a>
               
             
@@ -1186,8 +1285,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-03-20T00:00:00+08:00">
-                2017-03-20
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-03-31T00:00:00+08:00">
+                2017-03-31
               </time>
             
 
@@ -1222,10 +1321,13 @@
 
       
         
-          <h3 id="考拉PC前端重构之路"><a href="#考拉PC前端重构之路" class="headerlink" title="考拉PC前端重构之路"></a>考拉PC前端重构之路</h3><p>@(重构)[组件化|拆分]</p>
+          <h1 id="chrome插件开发简介（二）——如何添“加浏览器扩展白名单”"><a href="#chrome插件开发简介（二）——如何添“加浏览器扩展白名单”" class="headerlink" title="chrome插件开发简介（二）——如何添“加浏览器扩展白名单”"></a>chrome插件开发简介（二）——如何添“加浏览器扩展白名单”</h1><blockquote>
+<p>没有在Chrome应用商店web store上架发布的插件，如果没有添加到白名单里，下一次重启Chrome就会被禁用，而且无法手动启用，除非删掉重新添加。<br>可以通过添加白名单可以一劳永逸地解决这个问题。</p>
+</blockquote>
+<p>下面我们以“将日报插件添加到白名单”为例，讲解步骤</p>
           <!--noindex-->
           <div class="post-button text-center">
-            <a class="btn" href="/2017/03/20/前端重构感想/#more" rel="contents">
+            <a class="btn" href="/2017/03/31/chrome插件开发简介（二）——如何添“加浏览器扩展白名单”/#more" rel="contents">
               阅读全文 &raquo;
             </a>
           </div>
@@ -1271,7 +1373,7 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="https://blog.kaolafed.com/2017/03/16/深入了解层叠上下文和层叠顺序/">
+    <link itemprop="mainEntityOfPage" href="https://blog.kaolafed.com/2017/03/31/chrome插件开发简介（一）——开发入门/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="考拉前端团队">
@@ -1293,8 +1395,8 @@
             
               
                 
-                <a class="post-title-link" href="/2017/03/16/深入了解层叠上下文和层叠顺序/" itemprop="url">
-                  深入了解层叠上下文和层叠顺序
+                <a class="post-title-link" href="/2017/03/31/chrome插件开发简介（一）——开发入门/" itemprop="url">
+                  chrome插件开发简介（一）——开发入门
                 </a>
               
             
@@ -1310,8 +1412,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-03-16T00:00:00+08:00">
-                2017-03-16
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-03-31T00:00:00+08:00">
+                2017-03-31
               </time>
             
 
@@ -1346,134 +1448,13 @@
 
       
         
-          <p>前话：z-index只是CSS层叠上下文和层叠顺序中的一个马仔</p>
+          <h1 id="chrome插件开发简介（一）——开发入门"><a href="#chrome插件开发简介（一）——开发入门" class="headerlink" title="chrome插件开发简介（一）——开发入门"></a>chrome插件开发简介（一）——开发入门</h1><blockquote>
+<p>chrome作为目前最流行的浏览器，备受前端推崇，原因除了其对于前端标准的支持这一大核心原因之外，还有就是其强大的扩展性，<br>基于其开发规范实现的插件如今已经非常庞大，在国内也是欣欣向荣，<br>如天猫开发了大量的扩展，用于检测页面质量以及页面性能，淘宝开发了许多的扩展以供运营工具的优化等等。其强大性不言而喻。</p>
+</blockquote>
+<p>这里我们来讲一下其插件开发</p>
           <!--noindex-->
           <div class="post-button text-center">
-            <a class="btn" href="/2017/03/16/深入了解层叠上下文和层叠顺序/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="https://blog.kaolafed.com/2017/03/16/CORS 跨域请求/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="考拉前端团队">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.png">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="考拉前端团队博客">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2017/03/16/CORS 跨域请求/" itemprop="url">
-                  CORS 跨域请求
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-03-16T00:00:00+08:00">
-                2017-03-16
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <h2 id="跨域资源共享-CORS-Cross-origin-resource-sharing"><a href="#跨域资源共享-CORS-Cross-origin-resource-sharing" class="headerlink" title="跨域资源共享 CORS(Cross-origin resource sharing)"></a>跨域资源共享 CORS(Cross-origin resource sharing)</h2><p>CORS就是，允许浏览器向跨源服务器，发送XMLHttpRequest请求，并获取请求返回内容</p>
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2017/03/16/CORS 跨域请求/#more" rel="contents">
+            <a class="btn" href="/2017/03/31/chrome插件开发简介（一）——开发入门/#more" rel="contents">
               阅读全文 &raquo;
             </a>
           </div>
@@ -1514,7 +1495,7 @@
 
   
   <nav class="pagination">
-    <a class="extend prev" rel="prev" href="/page/5/"><i class="fa fa-angle-left"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/5/">5</a><span class="page-number current">6</span><a class="page-number" href="/page/7/">7</a><a class="extend next" rel="next" href="/page/7/"><i class="fa fa-angle-right"></i></a>
+    <a class="extend prev" rel="prev" href="/page/5/"><i class="fa fa-angle-left"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/5/">5</a><span class="page-number current">6</span><a class="page-number" href="/page/7/">7</a><span class="space">&hellip;</span><a class="page-number" href="/page/9/">9</a><a class="extend next" rel="next" href="/page/7/"><i class="fa fa-angle-right"></i></a>
   </nav>
 
 
@@ -1559,7 +1540,7 @@
           
             <div class="site-state-item site-state-posts">
               <a href="/archives">
-                <span class="site-state-item-count">67</span>
+                <span class="site-state-item-count">87</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>

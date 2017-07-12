@@ -250,7 +250,7 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="https://blog.kaolafed.com/2017/06/21/「译」图解 ArrayBuffers 和 SharedArrayBuffers/">
+    <link itemprop="mainEntityOfPage" href="https://blog.kaolafed.com/2017/07/09/js事件捕获、冒泡一些容易忽略的方面/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="考拉前端团队">
@@ -272,8 +272,8 @@
             
               
                 
-                <a class="post-title-link" href="/2017/06/21/「译」图解 ArrayBuffers 和 SharedArrayBuffers/" itemprop="url">
-                  「译」图解 ArrayBuffers 和 SharedArrayBuffers
+                <a class="post-title-link" href="/2017/07/09/js事件捕获、冒泡一些容易忽略的方面/" itemprop="url">
+                  js事件捕获、冒泡一些容易忽略的方面
                 </a>
               
             
@@ -289,8 +289,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-06-21T00:00:00+08:00">
-                2017-06-21
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-07-09T15:29:03+08:00">
+                2017-07-09
               </time>
             
 
@@ -325,834 +325,1043 @@
 
       
         
-          <p>翻译自：<a href="https://hacks.mozilla.org/2017/06/a-cartoon-intro-to-arraybuffers-and-sharedarraybuffers/" target="_blank" rel="external">A cartoon intro to ArrayBuffers and SharedArrayBuffers</a></p>
-<p>这是图解 SharedArrayBuffers 系列的第二篇：</p>
-<ol>
-<li><a href="https://github.com/kaola-fed/blog/issues/70" target="_blank" rel="external">内存管理碰撞课程</a></li>
-<li>图解 ArrayBuffers 和 SharedArrayBuffers</li>
-<li><a href="https://github.com/kaola-fed/blog/issues/72" target="_blank" rel="external">用 Atomics 避免 SharedArrayBuffers 竞争条件</a></li>
-</ol>
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2017/06/21/「译」图解 ArrayBuffers 和 SharedArrayBuffers/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="https://blog.kaolafed.com/2017/06/21/「译」内存管理碰撞课程/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="考拉前端团队">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.png">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="考拉前端团队博客">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2017/06/21/「译」内存管理碰撞课程/" itemprop="url">
-                  「译」内存管理碰撞课程
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-06-21T00:00:00+08:00">
-                2017-06-21
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <p>翻译自：<a href="https://hacks.mozilla.org/2017/06/a-crash-course-in-memory-management/" target="_blank" rel="external">A crash course in memory management</a></p>
-<p>这是图解 SharedArrayBuffers 系列的第一篇：</p>
-<ol>
-<li>内存管理碰撞课程</li>
-<li><a href="https://github.com/kaola-fed/blog/issues/71" target="_blank" rel="external">图解 ArrayBuffers 和 SharedArrayBuffers</a></li>
-<li><p><a href="https://github.com/kaola-fed/blog/issues/72" target="_blank" rel="external">用 Atomics 避免 SharedArrayBuffers 竞争条件</a></p>
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2017/06/21/「译」内存管理碰撞课程/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="https://blog.kaolafed.com/2017/06/21/「译」用 Atomics 避免 SharedArrayBuffers 竞争条件/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="考拉前端团队">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.png">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="考拉前端团队博客">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2017/06/21/「译」用 Atomics 避免 SharedArrayBuffers 竞争条件/" itemprop="url">
-                  「译」用 Atomics 避免 SharedArrayBuffers 竞争条件
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-06-21T00:00:00+08:00">
-                2017-06-21
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <p>翻译自：<a href="https://hacks.mozilla.org/2017/06/avoiding-race-conditions-in-sharedarraybuffers-with-atomics/" target="_blank" rel="external">Avoiding race conditions in SharedArrayBuffers with Atomics</a></p>
-<p>这是图解 SharedArrayBuffers 系列的第三篇：</p>
-<ol>
-<li><a href="https://github.com/kaola-fed/blog/issues/70" target="_blank" rel="external">内存管理碰撞课程</a></li>
-<li><a href="https://github.com/kaola-fed/blog/issues/71" target="_blank" rel="external">图解 ArrayBuffers 和 SharedArrayBuffers</a></li>
-<li>用 Atomics 避免 SharedArrayBuffers 竞争条件</li>
-</ol>
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2017/06/21/「译」用 Atomics 避免 SharedArrayBuffers 竞争条件/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="https://blog.kaolafed.com/2017/06/19/异步请求功能性优化实践/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="考拉前端团队">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.png">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="考拉前端团队博客">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2017/06/19/异步请求功能性优化实践/" itemprop="url">
-                  异步请求功能性优化实践
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-06-19T00:00:00+08:00">
-                2017-06-19
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <h2 id="背景"><a href="#背景" class="headerlink" title="背景"></a>背景</h2><p>在做开发的时候，某些接口的响应会比较慢，原因是服务器数据处理时间较长造成的。当响应较慢时，一般的做法只是是给用户提示加载中（转菊花），而不对界面的按钮进行禁用。</p>
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2017/06/19/异步请求功能性优化实践/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="https://blog.kaolafed.com/2017/06/16/vue-cli是如何工作的/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="考拉前端团队">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.png">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="考拉前端团队博客">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2017/06/16/vue-cli是如何工作的/" itemprop="url">
-                  vue-cli是如何工作的
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-06-16T00:00:00+08:00">
-                2017-06-16
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <p>vue-cli是Vue.js官方脚手架命令行工具，我们可以用它快速搭建Vue.js项目，vue-cli最主要的功能就是初始化项目，既可以使用官方模板，也可以使用自定义模板生成项目，而且从2.8.0版本开始，vue-cli新增了<code>build</code>命令，能让你零配置启动一个Vue.js应用。接下来，我们一起探究一下vue-cli是如何工作的。</p>
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2017/06/16/vue-cli是如何工作的/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="https://blog.kaolafed.com/2017/06/12/art-template学习笔记/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="考拉前端团队">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.png">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="考拉前端团队博客">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2017/06/12/art-template学习笔记/" itemprop="url">
-                  art-template学习笔记
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-06-12T00:00:00+08:00">
-                2017-06-12
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <blockquote>
-<p><code>art-template</code>是一个性能卓越的javascript模板引擎。除了高性能之外，Ta的语法简洁易懂、支持基础的js语法、能满足绝大多数的使用场景，而且其出色的调试功能，编写模板再无后顾之忧，能在模板中定位语法错误。在前后端分离方案中，几经对比，最后选用了<a href="https://github.com/aui/art-template" target="_blank" rel="external">art-template</a>这个前后端通用的轻量的模板。</p>
-</blockquote>
-<!-- more ->
-
-### 选用模板的几大原则
-
-- 性能；毕竟是要用在实际项目中的，性能差的，必弃之；
-- 语法功能方面：
-    - 基本的条件表达式、循环遍历等功能，是必备的；
-    - 模板嵌套，include子模板等功能，即模板重用功能也是必备的；
-    - 支持模板语法与js语句混写，算数运算、逻辑运算、比较运算等在做模板中能做常规处理也很重要；
-    - 支持功能函数；在变量输出前，需要做些特定的处理，如日期format等，这种使用场景不在少数，作为一个功能完善的模板，也是必不可少的。
-    - 语法简洁、可读性强；
-- 模板调试，加分项；
-- 支持主流的node框架以及打包工具等；
-- 模板引擎活跃度高、持续维护、有完整的文档等；
-
-
-当然，`art-template`都满足以上条件，使用之后也证实这是一个开发体验很棒的模板。下面来介绍下Ta。
-
----
-
-### 语法
-
-*art-template 同时支持两种模板语法。标准语法可以让模板更容易读写；原始语法具有强大的逻辑处理能力。下文均为标准语法。*
-
-#### 内容输出
-
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">&#123;&#123;value&#125;&#125;</div><div class="line">&#123;&#123;data.key&#125;&#125;</div><div class="line">&#123;&#123;data[&apos;key&apos;]&#125;&#125;</div><div class="line">&#123;&#123;a ? b : c&#125;&#125;</div><div class="line">&#123;&#123;a || b&#125;&#125;</div><div class="line">&#123;&#123;a + b&#125;&#125;</div></pre></td></tr></table></figure>
-<p>支持三元运算符、逻辑运算符等；</p>
-<h4 id="不转义输出"><a href="#不转义输出" class="headerlink" title="不转义输出"></a>不转义输出</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&#123;&#123;@value&#125;&#125;</div></pre></td></tr></table></figure>
-<p>不进行转义的输出，存在xxs风险，要谨慎使用；</p>
-<h4 id="设置变量"><a href="#设置变量" class="headerlink" title="设置变量"></a>设置变量</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&#123;&#123;set tlt = data.content.title&#125;&#125;</div></pre></td></tr></table></figure>
-<p>类freemarker中的<code>assign</code>进行变量设置，在多次取层级较深的对象属性时，设置变量来使用还是比较清晰的。</p>
-<h4 id="条件输出"><a href="#条件输出" class="headerlink" title="条件输出"></a>条件输出</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">&#123;&#123;if code &gt;= 0&#125;&#125; ... &#123;&#123;/if&#125;&#125;</div><div class="line"></div><div class="line">&#123;&#123;if topic.processState == 0&#125;&#125; </div><div class="line">... </div><div class="line">&#123;&#123;else if topic.processState==1&#125;&#125; </div><div class="line">...</div><div class="line">&#123;&#123;else&#125;&#125;</div><div class="line">... </div><div class="line">&#123;&#123;/if&#125;&#125;</div></pre></td></tr></table></figure>
-<h4 id="遍历输出"><a href="#遍历输出" class="headerlink" title="遍历输出"></a>遍历输出</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">&#123;&#123;each hotDiscussionList as list&#125;&#125;</div><div class="line">    &lt;span class=&quot;userName&quot;&gt;&#123;&#123;list.nickName&#125;&#125;&lt;/span&gt;</div><div class="line">&#123;&#123;/each&#125;&#125;</div></pre></td></tr></table></figure>
-<h4 id="子模板"><a href="#子模板" class="headerlink" title="子模板"></a>子模板</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">&#123;&#123;include &apos;./header.html&apos;&#125;&#125;</div><div class="line">&#123;&#123;include &apos;./header.html&apos; data&#125;&#125;</div></pre></td></tr></table></figure>
-<p>在父模板中，引入子模板，同时可以给子模板传入参数，如上；<br>在实际项目中，页头、页脚、公用模板就都可以提取出来作为子模板，在各个页面中引入进来，实现模板的公用；</p>
-<h4 id="模板继承"><a href="#模板继承" class="headerlink" title="模板继承"></a>模板继承</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">&#123;&#123;extend &apos;./layout.html&apos;&#125;&#125;</div><div class="line">&#123;&#123;block &apos;head&apos;&#125;&#125; ... &#123;&#123;/block&#125;&#125;</div></pre></td></tr></table></figure>
-<p>模板继承可以用来构建页面结构相似的基本模板“骨架”，快速构建多个相似页面，各自页面中实现差异部分。<br>实例：<br>layout.html</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line">&lt;!DOCTYPE html&gt;</div><div class="line">&lt;html&gt;</div><div class="line">&lt;head&gt;</div><div class="line">    &#123;&#123;include &apos;../partials/meta.html&apos;&#125;&#125;</div><div class="line">    &#123;&#123;block &apos;title&apos;&#125;&#125;&lt;title&gt;网易考拉海购&lt;/title&gt;&#123;&#123;/block&#125;&#125;</div><div class="line">&lt;/head&gt;</div><div class="line">&lt;body id=&quot;kaola-&#123;&#123;pageName&#125;&#125;&quot;&gt;</div><div class="line">    &#123;&#123;block &apos;content&apos;&#125;&#125;&#123;&#123;/block&#125;&#125;</div><div class="line">    &#123;&#123;block &apos;footerWidget&apos;&#125;&#125;</div><div class="line">       	&#123;&#123;include &apos;../partials/footer.html&apos;&#125;&#125;</div><div class="line">    &#123;&#123;/block&#125;&#125;</div><div class="line">    &#123;&#123;block &apos;others&apos;&#125;&#125;&#123;&#123;/block&#125;&#125;</div><div class="line">&lt;/body&gt;</div><div class="line">&lt;/html&gt;</div></pre></td></tr></table></figure>
-<p>home.html</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line">&#123;&#123;extend &apos;../../layouts/page.html&apos;&#125;&#125;</div><div class="line"></div><div class="line">&#123;&#123;block &apos;title&apos;&#125;&#125;</div><div class="line">    &#123;&#123;title&#125;&#125;</div><div class="line">&#123;&#123;/block&#125;&#125;</div><div class="line"></div><div class="line">&#123;&#123;block &apos;head&apos;&#125;&#125;</div><div class="line">    &lt;link rel=&quot;stylesheet&quot; href=&quot;custom.css&quot;&gt;</div><div class="line">&#123;&#123;/block&#125;&#125;</div><div class="line"></div><div class="line">&#123;&#123;block &apos;content&apos;&#125;&#125;</div><div class="line">    &lt;p&gt;This is just an awesome page.&lt;/p&gt;</div><div class="line">&#123;&#123;/block&#125;&#125;</div></pre></td></tr></table></figure>
-<h4 id="过滤器"><a href="#过滤器" class="headerlink" title="过滤器"></a>过滤器</h4><p>注册过滤器：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">var template = require(&apos;art-template&apos;);</div><div class="line">template.defaults.imports.dateFormat = function(date, format)&#123;/*...*/&#125;;</div></pre></td></tr></table></figure>
-<p>使用过滤器：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&#123;&#123;date | timestamp | dateFormat &apos;yyyy-MM-dd hh:mm:ss&apos;&#125;&#125;</div></pre></td></tr></table></figure></p>
-<p>过滤器语法类似管道操作符，可以多个过滤器叠加；</p>
-<h3 id="模板变量"><a href="#模板变量" class="headerlink" title="模板变量"></a>模板变量</h3><p>通过<code>template.defaults.imports</code>给模板中导入变量，通过 $imports ，可以访问到模板外部的全局变量与导入的变量。</p>
-<p>模板中内置的变量有：</p>
+          <p>最近网络问题的反馈问题有点多，国内网络的国情，大家都清楚，只能靠强化自身努力来解决了；为了了解我们资源加载的实际情况，最近在考虑统计CDN资源加载情况，以及做一些页面资源全局检查，比如：</p>
 <ul>
-<li>$data 传入模板的数据</li>
-<li>$imports 外部导入的变量以及全局变量</li>
-<li>print 字符串输出函数</li>
-<li>include 子模板载入函数</li>
-<li>extend 模板继承模板导入函数</li>
-<li>block 模板块声明函数</li>
+<li>js、css资源的<code>load</code>，<code>error</code>不支持冒泡，如何支持全局捕捉？</li>
+<li>如何在页面图片<code>load</code>后，做一个统一处理？</li>
 </ul>
-<h3 id="注释"><a href="#注释" class="headerlink" title="注释"></a>注释</h3><p>支持html注释，模板注释如下，不会在html中输出：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">&lt;%# 当前页面名称 %&gt;</div><div class="line">window.__pageName = &quot;&#123;&#123;pageName&#125;&#125;&quot;;</div></pre></td></tr></table></figure>
-<h3 id="性能"><a href="#性能" class="headerlink" title="性能"></a>性能</h3><p>对于art-template高效的秘密，可以查阅作者的解释：<a href="http://cdc.tencent.com/2012/06/15/%E9%AB%98%E6%80%A7%E8%83%BDjavascript%E6%A8%A1%E6%9D%BF%E5%BC%95%E6%93%8E%E5%8E%9F%E7%90%86%E8%A7%A3%E6%9E%90/">高性能JavaScript模板引擎原理解析</a></p>
-<hr>
-<h3 id="参考文档"><a href="#参考文档" class="headerlink" title="参考文档"></a>参考文档</h3><ul>
-<li><a href="https://github.com/aui/art-template">https://github.com/aui/art-template</a></li>
-<li><a href="https://aui.github.io/art-template/docs/">https://aui.github.io/art-template/docs/</a></li>
-</ul>
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2017/07/09/js事件捕获、冒泡一些容易忽略的方面/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="https://blog.kaolafed.com/2017/07/07/解读 Project Guidelines/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="考拉前端团队">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="考拉前端团队博客">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2017/07/07/解读 Project Guidelines/" itemprop="url">
+                  解读 Project Guidelines
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-07-07T00:00:00+08:00">
+                2017-07-07
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <p>解读Project Guidelines</p>
+<p>今天早晨在刷Github Trending的时候发现All language的第一名是个名为<code>project-huidelines</code>的JavaScript项目，看项目名字和描述可以知道是一个JavaScript项目最佳实践的文章，    内容比较精炼，值得一读。这里不会全部翻译一遍，会有所删减，有兴趣的可以看<a href="https://github.com/wearehive/project-guidelines" target="_blank" rel="external">原repo</a>。</p>
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2017/07/07/解读 Project Guidelines/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="https://blog.kaolafed.com/2017/07/04/如何把一个 RegularJS 组件打成 npm 包/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="考拉前端团队">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="考拉前端团队博客">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2017/07/04/如何把一个 RegularJS 组件打成 npm 包/" itemprop="url">
+                  如何把一个 RegularJS 组件打成 npm 包
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-07-04T00:00:00+08:00">
+                2017-07-04
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <p>本篇基于 RegularJS 热区组件，简单分享一下组件打包发布的全流程及主要遇到的问题。</p>
+<h2 id="目录"><a href="#目录" class="headerlink" title="目录"></a>目录</h2><ol>
+<li>项目初始化</li>
+<li>开发环境准备，安装基础依赖</li>
+<li>将组件打包输出成多种模式!important</li>
+<li>进入开发</li>
+<li>包装工作</li>
+<li>最终发布</li>
+</ol>
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2017/07/04/如何把一个 RegularJS 组件打成 npm 包/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="https://blog.kaolafed.com/2017/07/04/便于 Code review 的 Git 流程方案/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="考拉前端团队">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="考拉前端团队博客">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2017/07/04/便于 Code review 的 Git 流程方案/" itemprop="url">
+                  便于 Code review 的 Git 流程方案
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-07-04T00:00:00+08:00">
+                2017-07-04
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <blockquote>
+<p>设定读者已经了解基本的 Git 操作和 Git 分支管理策略。</p>
+</blockquote>
+<p>为了强化代码记录的可读性并协助 Code review 的执行，通过参考已有流程方案，设定一种适合的 Git 流程方案。</p>
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2017/07/04/便于 Code review 的 Git 流程方案/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="https://blog.kaolafed.com/2017/07/04/前端工程-从原理到轮子之状态管理/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="考拉前端团队">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="考拉前端团队博客">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2017/07/04/前端工程-从原理到轮子之状态管理/" itemprop="url">
+                  前端工程-从原理到轮子之状态管理
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-07-04T00:00:00+08:00">
+                2017-07-04
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <blockquote>
+<p>目前，一个典型的前端项目技术框架的选型主要包括以下三个方面：</p>
+<ol>
+<li>JS模块化框架。(Require/Sea/ES6 Module/NEJ)</li>
+<li>前端模板框架。(React/Vue/Regular)</li>
+<li>状态管理框架。(Flux/Redux)<br>系列文章将从上面三个方面来介绍相关原理，并且尝试自己造一个简单的轮子。</li>
+</ol>
+</blockquote>
+<p>本篇介绍的是<strong>状态管理框架</strong>。<br>随着web应用变得越来越复杂，再加上相关MVC/MVVM框架的流行，那么对数据流动的控制就显得越发重要。本篇以以Redux为例，来介绍<strong>状态管理框架</strong>的相关思想。Redux是在Flux的基础上产生的，基本思想是保证数据的单向流动，同时便于控制、使用、测试。</p>
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2017/07/04/前端工程-从原理到轮子之状态管理/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="https://blog.kaolafed.com/2017/07/04/MVVM 式的热区组件开发/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="考拉前端团队">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="考拉前端团队博客">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2017/07/04/MVVM 式的热区组件开发/" itemprop="url">
+                  MVVM 式的热区组件开发
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-07-04T00:00:00+08:00">
+                2017-07-04
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <h2 id="目录"><a href="#目录" class="headerlink" title="目录"></a>目录</h2><ol>
+<li>什么是热区</li>
+<li>热区功能介绍</li>
+<li>实现手段与结构划分</li>
+<li>相关指令介绍</li>
+<li>体验增强</li>
+<li>其它总结</li>
+</ol>
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2017/07/04/MVVM 式的热区组件开发/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="https://blog.kaolafed.com/2017/07/03/呈现系统简介/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="考拉前端团队">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="考拉前端团队博客">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2017/07/03/呈现系统简介/" itemprop="url">
+                  呈现系统简介
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-07-03T00:00:00+08:00">
+                2017-07-03
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <h1 id="呈现系统简介"><a href="#呈现系统简介" class="headerlink" title="呈现系统简介"></a>呈现系统简介</h1><p>呈现系统的作用就是显示搭建系统配出来的页面。搭建系统的页面是由模块搭出来的。所以呈现系统的开发就是模块/组件的开发。</p>
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2017/07/03/呈现系统简介/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="https://blog.kaolafed.com/2017/07/03/记一次优化总结/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="考拉前端团队">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="考拉前端团队博客">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2017/07/03/记一次优化总结/" itemprop="url">
+                  记一次优化总结
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-07-03T00:00:00+08:00">
+                2017-07-03
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <p>场景：做 KPI 管理项目，需要做一个搜索下拉选择框，可以搜索或者选择员工的信息，每个员工需要展示的信息只有三项，分别为头像、姓名、工号，但是却造成了页面卡顿的现象，而且很严重。最后查看 chrome 中元素发现 DOM 节点竟然创造了 3 万多，因为线上的员工信息数量庞大，DOM 节点也创建了很多。</p>
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2017/07/03/记一次优化总结/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="https://blog.kaolafed.com/2017/07/03/使用electron开发基于web技术的桌面应用(1)/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="考拉前端团队">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="考拉前端团队博客">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2017/07/03/使用electron开发基于web技术的桌面应用(1)/" itemprop="url">
+                  使用electron开发基于web技术的桌面应用
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-07-03T00:00:00+08:00">
+                2017-07-03
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <!-- 为了更方便归档，请先完善以上信息，正文贴下面 -->
+<!--
+注意点：
+0. 文章中的资源（主要是图片）引用请使用 HTTPS
+1. 文章末可以加上自己的署名，如： by [Kaola](http://www.kaola.com)
+2. 最好不要用 NOS 图床，感觉加防盗链是迟早的事
+3. 文章会定期归档到 https://blog.kaolafed.com/
 -->
-          
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="https://blog.kaolafed.com/2017/06/08/生命中最简单又最困难的事/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="考拉前端团队">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.png">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="考拉前端团队博客">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2017/06/08/生命中最简单又最困难的事/" itemprop="url">
-                  生命中最简单又最困难的事
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-06-08T00:00:00+08:00">
-                2017-06-08
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <h4 id="来自《生命中最简单又最困难大事》"><a href="#来自《生命中最简单又最困难大事》" class="headerlink" title="来自《生命中最简单又最困难大事》"></a>来自《生命中最简单又最困难大事》</h4><h4 id="著——【美】大卫·福斯特·华莱士【2005年再肯扬学院毕业典礼上的演讲】"><a href="#著——【美】大卫·福斯特·华莱士【2005年再肯扬学院毕业典礼上的演讲】" class="headerlink" title="著——【美】大卫·福斯特·华莱士【2005年再肯扬学院毕业典礼上的演讲】"></a>著——【美】大卫·福斯特·华莱士【2005年再肯扬学院毕业典礼上的演讲】</h4><h4 id="译——龙彦-马磊"><a href="#译——龙彦-马磊" class="headerlink" title="译——龙彦 马磊"></a>译——龙彦 马磊</h4><blockquote>
-<p>两条小鱼在水里游泳，突然碰到一条从对岸游来的老鱼向他们点头问好：“早啊，小伙子们，水里怎样？”<br>小鱼继续往前游来一会儿，其中一条终于忍不住了，问道：“<em>水是个什么玩意？</em>”</p>
-</blockquote>
+<p>随着互联网的发展, 越来越多C/S模式的应用正逐渐变成B/S模式, 有些没有S端的应用, 也从桌面转移到web, 这得益于web的轻量, 开发迅速, 不用装卸等优点. </p>
+<p>但是, web应用有一个局限–无法对文件系统执行操作. </p>
+<p>当我们既想要web开发的快捷, 又想要对操作系统的api调用时, 基于浏览器内核的桌面开发技术应运而生.<br>没记错的话, 有道云笔记客户端就是基于这一技术开发的, 具体解决方案叫什么, 我忘了, 总之今天我们不介绍这个.</p>
           <!--noindex-->
           <div class="post-button text-center">
-            <a class="btn" href="/2017/06/08/生命中最简单又最困难的事/#more" rel="contents">
+            <a class="btn" href="/2017/07/03/使用electron开发基于web技术的桌面应用(1)/#more" rel="contents">
               阅读全文 &raquo;
             </a>
           </div>
@@ -1198,7 +1407,7 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="https://blog.kaolafed.com/2017/06/07/Feedback踩坑之旅/">
+    <link itemprop="mainEntityOfPage" href="https://blog.kaolafed.com/2017/06/30/请谨慎使用nej框架提供的工具函数_$format/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="考拉前端团队">
@@ -1220,8 +1429,8 @@
             
               
                 
-                <a class="post-title-link" href="/2017/06/07/Feedback踩坑之旅/" itemprop="url">
-                  Feedback踩坑之旅
+                <a class="post-title-link" href="/2017/06/30/请谨慎使用nej框架提供的工具函数_$format/" itemprop="url">
+                  请谨慎使用nej框架提供的工具函数_$format
                 </a>
               
             
@@ -1237,8 +1446,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-06-07T00:00:00+08:00">
-                2017-06-07
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-06-30T00:00:00+08:00">
+                2017-06-30
               </time>
             
 
@@ -1273,268 +1482,11 @@
 
       
         
-          <p>目录</p>
-<h4 id="1-重复的跨域头"><a href="#1-重复的跨域头" class="headerlink" title="1. 重复的跨域头"></a><a href="#section1">1. 重复的跨域头</a></h4><h4 id="2-打包后代码报错"><a href="#2-打包后代码报错" class="headerlink" title="2. 打包后代码报错"></a><a href="#section2">2. 打包后代码报错</a></h4><h4 id="3-获取客户端IP"><a href="#3-获取客户端IP" class="headerlink" title="3. 获取客户端IP"></a><a href="#section3">3. 获取客户端IP</a></h4>
+          <p>前阵子评论系统的后端开发同学反馈，偶尔会收到 NaN-00-00 00:00:00 这样格式的时间，希望我这边能协助排查一下。</p>
+<p>根据提供的信息，很容易联想的格式化时间的时候出现了问题。评论系统页面并不多，并且查询条件也很类似，因此找了一个比较典型的页面开始分析。</p>
           <!--noindex-->
           <div class="post-button text-center">
-            <a class="btn" href="/2017/06/07/Feedback踩坑之旅/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="https://blog.kaolafed.com/2017/06/06/websocket homework之聊天室优化/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="考拉前端团队">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.png">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="考拉前端团队博客">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2017/06/06/websocket homework之聊天室优化/" itemprop="url">
-                  websocket homework之聊天室优化
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-06-06T00:00:00+08:00">
-                2017-06-06
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <h3 id="homework"><a href="#homework" class="headerlink" title="homework?"></a>homework?</h3><p>为什么叫homework？来源于<a href="https://socket.io/get-started/chat/" target="_blank" rel="external">socket.io的聊天室例子</a>，例子中介绍了用socket.io搭建简单聊天室的相关步骤，在例子结尾处留下了homework，即对该聊天室的几点优化建议。本文在最后也会给出这些优化的具体实现代码，但是一步一步来，我们先了解实现聊天室的原理和相关技术。</p>
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2017/06/06/websocket homework之聊天室优化/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="https://blog.kaolafed.com/2017/06/05/初识mongoDB（二）/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="考拉前端团队">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.png">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="考拉前端团队博客">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2017/06/05/初识mongoDB（二）/" itemprop="url">
-                  初识mongoDB（二）
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-06-05T00:00:00+08:00">
-                2017-06-05
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <h2 id="常见的基本操作"><a href="#常见的基本操作" class="headerlink" title="常见的基本操作"></a>常见的基本操作</h2><ul>
-<li><p><strong>列出所有/当前的数据库</strong></p>
-  <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">show dbs</div></pre></td></tr></table></figure>
-<p>  <img src="https://haitao.nos.netease.com/49cc04e3-b972-40e2-a900-679e171712d8.png" alt="image"></p>
-<p>  <strong>Q:为什么连接了test数据库，在显示所有数据库的时候竟没有test呢？</strong></p>
-<blockquote>
-<p>A:这是因为连接test时，并没有向其中写数据，所以并没有真正的建立、只是在使用当前的数据库。</p>
-</blockquote>
-</li>
-</ul>
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2017/06/05/初识mongoDB（二）/#more" rel="contents">
+            <a class="btn" href="/2017/06/30/请谨慎使用nej框架提供的工具函数_$format/#more" rel="contents">
               阅读全文 &raquo;
             </a>
           </div>
@@ -1575,7 +1527,7 @@
 
   
   <nav class="pagination">
-    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><span class="space">&hellip;</span><a class="page-number" href="/page/7/">7</a><a class="extend next" rel="next" href="/page/2/"><i class="fa fa-angle-right"></i></a>
+    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><span class="space">&hellip;</span><a class="page-number" href="/page/9/">9</a><a class="extend next" rel="next" href="/page/2/"><i class="fa fa-angle-right"></i></a>
   </nav>
 
 
@@ -1620,7 +1572,7 @@
           
             <div class="site-state-item site-state-posts">
               <a href="/archives">
-                <span class="site-state-item-count">67</span>
+                <span class="site-state-item-count">87</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>
